@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Data Engineer</title>
+    <title>Amol Narwade - Data Engineer | Analytics Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +22,6 @@
             --success: #10b981;
             --warning: #f59e0b;
         }
-
         * {
             margin: 0;
             padding: 0;
@@ -764,8 +763,71 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ===== Architecture Diagram Wrapper ===== */
+        .architecture-diagram {
+          margin: 2rem 0;
+          padding: 1.5rem 2rem;
+          border-radius: 14px;
+          background: linear-gradient(180deg, #020617, #020617cc);
+          border: 1px solid #1e293b;
+          overflow-x: auto;
+        }
+
+        /* ===== Mermaid SVG ===== */
+        .architecture-diagram svg {
+          max-width: 100%;
+          height: auto;
+        }
+
+        /* ===== Node Styling ===== */
+        .architecture-diagram .node rect,
+        .architecture-diagram .node polygon {
+          rx: 8;
+          ry: 8;
+          stroke-width: 1.5px;
+        }
+
+        /* ===== Text ===== */
+        .architecture-diagram text {
+          font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          fill: #e5e7eb;
+        }
+
+        /* ===== Edges ===== */
+        .architecture-diagram .edgePath path {
+          stroke: #94a3b8;
+          stroke-width: 1.4px;
+        }
+
+        /* ===== Edge Labels ===== */
+        .architecture-diagram .edgeLabel {
+          background-color: #020617;
+          color: #cbd5f5;
+          font-size: 11px;
+          padding: 2px 6px;
+          border-radius: 6px;
+        }
+
+        /* ===== Hover Effect (Subtle) ===== */
+        .architecture-diagram .node:hover rect {
+          stroke: #38bdf8;
+          stroke-width: 2px;
+        }
     </style>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "dark",
+      securityLevel: "loose"
+    });
+  });
+</script>
 <body>
     <div class="grid-background"></div>
 
@@ -792,17 +854,17 @@
                 <div class="terminal-prompt">
                     <span class="user">guest@portfolio</span>:<span class="path">~</span>$ cat intro.txt
                 </div>
-                <h1>Your Name</h1>
-                <p class="title">Data Engineer | Pipeline Architect</p>
-                <p>Building scalable data infrastructure that processes billions of events daily. Specialized in designing robust ETL pipelines, optimizing data warehouses, and enabling data-driven decision making at scale.</p>
+                <h1>Amol Narwade</h1>
+                <p class="title">Data Engineer | Analytics Engineer</p>
+                <p>I design and operate scalable data platforms that process billions of records daily - turning raw, messy data into reliable, analytics-ready systems that teams trust to make decisions.</p>
                 
                 <div class="tech-stack">
                     <span class="tech-badge">Python</span>
                     <span class="tech-badge">Apache Spark</span>
-                    <span class="tech-badge">AWS</span>
-                    <span class="tech-badge">Airflow</span>
+                    <span class="tech-badge">Azure</span>
+                    <span class="tech-badge">dbt</span>
                     <span class="tech-badge">SQL</span>
-                    <span class="tech-badge">Kafka</span>
+                    <span class="tech-badge">Power BI</span>
                 </div>
 
                 <div class="cta-buttons">
@@ -892,16 +954,16 @@
                         <span class="skill-level">●●●●●</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Apache Kafka</span>
+                        <span class="skill-name">Databricks</span>
                         <span class="skill-level">●●●●○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Apache Flink</span>
-                        <span class="skill-level">●●●○○</span>
+                        <span class="skill-name">dbt</span>
+                        <span class="skill-level">●●●●○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Apache Beam</span>
-                        <span class="skill-level">●●●○○</span>
+                        <span class="skill-name">Azure Data Factory</span>
+                        <span class="skill-level">●●●●○</span>
                     </div>
                 </div>
             </div>
@@ -914,15 +976,15 @@
                         <span class="skill-level">●●●●●</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Prefect</span>
+                        <span class="skill-name">Microsoft Azure (ADLS, ADF, Databricks)</span>
                         <span class="skill-level">●●●●○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Luigi</span>
+                        <span class="skill-name">Docker</span>
                         <span class="skill-level">●●●○○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Dagster</span>
+                        <span class="skill-name">Terraform</span>
                         <span class="skill-level">●●●○○</span>
                     </div>
                 </div>
@@ -932,7 +994,7 @@
                 <h3>Data Storage</h3>
                 <div class="skill-list">
                     <div class="skill-item">
-                        <span class="skill-name">PostgreSQL</span>
+                        <span class="skill-name">Delta Lake</span>
                         <span class="skill-level">●●●●●</span>
                     </div>
                     <div class="skill-item">
@@ -944,30 +1006,30 @@
                         <span class="skill-level">●●●●○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">BigQuery</span>
-                        <span class="skill-level">●●●○○</span>
+                        <span class="skill-name">PostgreSQL</span>
+                        <span class="skill-level">●●●●○</span>
                     </div>
                 </div>
             </div>
 
             <div class="skill-category fade-in">
-                <h3>Cloud & DevOps</h3>
+                <h3>Analytics & Data Modeling</h3>
                 <div class="skill-list">
                     <div class="skill-item">
-                        <span class="skill-name">AWS (S3, EMR, Glue)</span>
+                        <span class="skill-name">dbt</span>
                         <span class="skill-level">●●●●●</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Docker / Kubernetes</span>
+                        <span class="skill-name">Dimensional Modeling</span>
                         <span class="skill-level">●●●●○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Terraform</span>
+                        <span class="skill-name">Semantic Models</span>
                         <span class="skill-level">●●●●○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">CI/CD (Jenkins, GitLab)</span>
-                        <span class="skill-level">●●●○○</span>
+                        <span class="skill-name">KPI & Metrics Design</span>
+                        <span class="skill-level">●●●●○</span>
                     </div>
                 </div>
             </div>
@@ -1006,7 +1068,7 @@
                         <span class="skill-level">●●●●○</span>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Soda Core</span>
+                        <span class="skill-name">Custom Data Validation Frameworks</span>
                         <span class="skill-level">●●●○○</span>
                     </div>
                     <div class="skill-item">
@@ -1028,230 +1090,310 @@
             <!-- Project 1 -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3>Real-Time Analytics Pipeline</h3>
+                    <h3>Azure Databricks Unified Analytics Platform (Retail & Logistics)</h3>
                     <div class="project-meta">
-                        <span>📅 2024</span>
+                        <span>📅 2025</span>
                         <span>🏢 Enterprise Scale</span>
                         <span>⚡ Real-Time</span>
                     </div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">
-                        Designed and implemented a real-time data pipeline processing 5B+ events daily from multiple sources. Built streaming architecture using Kafka and Spark Structured Streaming with sub-second latency for business-critical dashboards.
+                        Built a cloud-native Azure Lakehouse to unify siloed retail and logistics data into a single analytics platform. The goal was to eliminate inconsistent KPIs and reduce the 24-hour reporting delay that limited operational decision-making.
+Using Delta Lake and a Medallion architecture, the platform supports both batch and streaming workloads while meeting financial reporting and governance requirements. The solution provides standardized, near-real-time insights across operations, finance, and leadership teams.
                     </p>
-                    
                     <div class="architecture-diagram">
-Kafka → Spark Streaming → Data Validation
-   ↓                ↓
-S3 Raw        Transformed Data
-   ↓                ↓
- Glue ETL    → Redshift DWH → QuickSight
-   ↓                ↓
-Delta Lake     Real-time APIs
-                    </div>
+                        <pre class="mermaid">
+                                flowchart LR
 
+                                    S[Retail & Logistics Systems]:::source
+                                    ADF[Azure Data Factory]:::ingest
+                                    EH[Event Hubs]:::ingest
+                                    Bronze[Bronze]:::lake
+                                    Silver[Silver]:::lake
+                                    Gold[Gold]:::lake
+                                    ADLS[ADLS Gen2]:::lake
+                                    Synapse[Synapse Serverless SQL]:::serve
+                                    PowerBI[Power BI]:::serve
+
+                                    S -->|Batch| ADF
+                                    S -->|Streaming| EH
+                                    ADF --> Bronze
+                                    EH --> Bronze
+                                    Bronze --> Silver --> Gold
+                                    Gold --> ADLS
+                                    Gold --> Synapse --> PowerBI
+
+                                    classDef source fill:#111827,stroke:#38bdf8,color:#e5e7eb
+                                    classDef ingest fill:#020617,stroke:#22c55e,color:#e5e7eb
+                                    classDef lake fill:#020617,stroke:#facc15,color:#e5e7eb
+                                    classDef serve fill:#020617,stroke:#a78bfa,color:#e5e7eb
+                                </pre>
+
+<!--                         <pre class="mermaid">-->
+<!--                        flowchart LR-->
+<!--                            Sources[Retail & Logistics Systems]-->
+
+<!--                            Sources &ndash;&gt;|Batch| ADF[Azure Data Factory]-->
+<!--                            Sources &ndash;&gt;|Streaming| EH[Event Hubs]-->
+
+<!--                            ADF &ndash;&gt; Bronze[Bronze]-->
+<!--                            EH &ndash;&gt; Bronze-->
+
+<!--                            Bronze &ndash;&gt; Silver[Silver]-->
+<!--                            Silver &ndash;&gt; Gold[Gold]-->
+
+<!--                            Gold &ndash;&gt; ADLS[ADLS Gen2]-->
+<!--                            Gold &ndash;&gt; Synapse[Synapse Serverless SQL]-->
+<!--                            Synapse &ndash;&gt; PowerBI[Power BI]-->
+<!--                        </pre>-->
+                    </div>
+<!--                    <p class="diagram-caption">-->
+<!--                        Medallion-based Azure Lakehouse supporting batch and streaming workloads with serverless analytics.-->
+<!--                    </p>-->
                     <div class="tech-stack-project">
-                        <span class="tech-tag">Apache Kafka</span>
-                        <span class="tech-tag">Spark Streaming</span>
-                        <span class="tech-tag">AWS Glue</span>
-                        <span class="tech-tag">Redshift</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Azure Data Factory</span>
+                        <span class="tech-tag">Databricks</span>
+                        <span class="tech-tag">Delta Lake</span>
+                        <span class="tech-tag">ADLS Gen2</span>
+                        <span class="tech-tag">Synapse Serverless</span>
+                        <span class="tech-tag">Power BI</span>
                     </div>
 
                     <div class="project-metrics">
                         <div class="project-metric">
-                            <div class="project-metric-value">5B+</div>
-                            <div class="project-metric-label">Events/Day</div>
+                            <div class="project-metric-value">~30%</div>
+                            <div class="project-metric-label">Reduced Databricks DBU costs</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">&lt;1s</div>
-                            <div class="project-metric-label">Latency</div>
+                            <div class="project-metric-value">~40%</div>
+                            <div class="project-metric-label">Automated manual reconciliation work</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">99.9%</div>
-                            <div class="project-metric-label">Uptime</div>
+                            <div class="project-metric-value">20%</div>
+                            <div class="project-metric-label">Improved logistics visibility, reducing idle time</div>
                         </div>
                     </div>
 
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/realtime-pipeline" class="project-link" target="_blank">View Code →</a>
-                        <a href="#" class="project-link" target="_blank">Documentation →</a>
-                    </div>
+<!--                    <div class="project-links">-->
+<!--                        <a href="https://github.com/yourusername/realtime-pipeline" class="project-link" target="_blank">View Code →</a>-->
+<!--                        <a href="#" class="project-link" target="_blank">Documentation →</a>-->
+<!--                    </div>-->
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3>Data Warehouse Modernization</h3>
+                    <h3>Azure Databricks Performance & Cost Optimization Initiative</h3>
                     <div class="project-meta">
-                        <span>📅 2023</span>
-                        <span>🏢 Migration Project</span>
+                        <span>📅 2024</span>
+                        <span>🏢 Consultant Project</span>
                         <span>💰 Cost Optimization</span>
                     </div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">
-                        Led migration from legacy on-premise data warehouse to cloud-native Snowflake. Redesigned data models using star schema, implemented incremental loading patterns, and reduced query times by 10x while cutting costs by 70%.
+                        Led a platform-wide performance and cost optimization initiative for an existing Azure Databricks environment that was struggling to scale. As data volumes increased, pipeline runtimes grew, failures became frequent, and compute costs rose month over month.
+The focus was to stabilize production workloads, improve processing efficiency, and introduce cost-aware engineering practices—all without redesigning the core architecture. The result was a more predictable, scalable, and operationally sustainable data platform.
                     </p>
                     
                     <div class="architecture-diagram">
-Legacy Oracle → AWS DMS → S3 Staging
-      ↓              ↓
-Data Profiling   Schema Mapping
-      ↓              ↓
-   Validation → Snowflake DWH
-      ↓              ↓
-   dbt Models → Star Schema
-      ↓              ↓
-Testing Suite → BI Tools (Tableau)
+                         <pre class="mermaid">
+                            flowchart LR
+
+                            Sources[Raw Data Sources]:::source
+                            Bronze[Bronze Delta Tables]:::lake
+                            Silver[Silver Delta Tables]:::lake
+                            Gold[Gold Delta Tables]:::lake
+                            Query[Analytical Queries]:::serve
+                            BI[BI / Analytics]:::serve
+
+                            Sources --> Bronze --> Silver --> Gold
+                            Gold --> Query --> BI
+
+                            Optimize[OPTIMIZE & Z-ORDER<br/>Auto Compaction]:::maint
+                            Optimize -.-> Bronze
+                            Optimize -.-> Silver
+                            Optimize -.-> Gold
+
+                            classDef source fill:#111827,stroke:#38bdf8,color:#e5e7eb
+                            classDef lake fill:#020617,stroke:#facc15,color:#e5e7eb
+                            classDef serve fill:#020617,stroke:#a78bfa,color:#e5e7eb
+                            classDef maint fill:#020617,stroke:#22c55e,color:#e5e7eb
+                            </pre>
                     </div>
 
                     <div class="tech-stack-project">
-                        <span class="tech-tag">Snowflake</span>
-                        <span class="tech-tag">AWS DMS</span>
-                        <span class="tech-tag">dbt</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Great Expectations</span>
-                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Databricks</span>
+                        <span class="tech-tag">Spark UI</span>
+                        <span class="tech-tag">Delta Lake</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Terraform</span>
                     </div>
 
                     <div class="project-metrics">
                         <div class="project-metric">
-                            <div class="project-metric-value">10x</div>
-                            <div class="project-metric-label">Faster Queries</div>
+                            <div class="project-metric-value">30–40%</div>
+                            <div class="project-metric-label"> Reduced critical pipeline runtimes</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">70%</div>
-                            <div class="project-metric-label">Cost Savings</div>
+                            <div class="project-metric-value">30%</div>
+                            <div class="project-metric-label">Significantly lowered Databricks compute costs</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">5TB</div>
-                            <div class="project-metric-label">Data Migrated</div>
+                            <div class="project-metric-value">🔧</div>
+                            <div class="project-metric-label"> Eliminated memory-related job failures</div>
                         </div>
                     </div>
 
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/dwh-migration" class="project-link" target="_blank">View Code →</a>
-                        <a href="#" class="project-link" target="_blank">Case Study →</a>
-                    </div>
+<!--                    <div class="project-links">-->
+<!--                        <a href="https://github.com/yourusername/dwh-migration" class="project-link" target="_blank">View Code →</a>-->
+<!--                        <a href="#" class="project-link" target="_blank">Case Study →</a>-->
+<!--                    </div>-->
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3>ML Feature Store Platform</h3>
+                    <h3>Corporate Account Statement Analytics (Banking)</h3>
                     <div class="project-meta">
-                        <span>📅 2023</span>
-                        <span>🤖 ML Infrastructure</span>
-                        <span>🚀 Production</span>
+                        <span>📅 2022</span>
+                        <span>🤖Analytics Engineering</span>
+                        <span>🚀Banking</span>
                     </div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">
-                        Built a centralized feature store for ML teams to discover, share, and serve features consistently across training and inference. Implemented automated feature pipelines with monitoring, versioning, and point-in-time correctness.
+                        Designed a dbt-based analytics transformation layer to convert raw transactional and unstructured account statement data into analytics-ready datasets for credit risk analysis. The project addressed fragmented data sources and manual reporting that limited timely insights.
+By introducing governed transformations, reusable models, and strong data quality checks, the solution created a trusted single source of truth for corporate account analytics. Credit managers gained faster, more consistent visibility into customer behavior and portfolio risk.
                     </p>
                     
                     <div class="architecture-diagram">
-Data Sources → Feature Pipelines (Airflow)
-      ↓              ↓
-Feature Engineering → Feature Registry
-      ↓              ↓
-Validation → Feature Store (Redis + S3)
-      ↓              ↓
-Monitoring → Serving APIs (FastAPI)
-      ↓              ↓
-ML Training ← → ML Inference
+
+                         <pre class="mermaid">
+                                flowchart LR
+
+                                Raw[Raw Banking Data]:::source
+                                Stage[dbt Staging Models]:::ingest
+                                Inter[dbt Intermediate Models]:::ingest
+                                Marts[Fact & Dimension Tables]:::lake
+                                BI[Power BI Dashboards]:::serve
+
+                                Raw --> Stage --> Inter --> Marts --> BI
+
+                                Quality[dbt Tests & Data Quality Checks]:::maint
+                                Quality -.-> Stage
+                                Quality -.-> Inter
+                                Quality -.-> Marts
+
+                                %% ===== Color Definitions =====
+                                classDef source fill:#0b1220,stroke:#38bdf8,color:#e5e7eb
+                                classDef ingest fill:#020617,stroke:#22c55e,color:#e5e7eb
+                                classDef lake fill:#020617,stroke:#facc15,color:#e5e7eb
+                                classDef serve fill:#020617,stroke:#818cf8,color:#e5e7eb
+                                classDef maint fill:#020617,stroke:#10b981,color:#e5e7eb
+                                </pre>
                     </div>
 
                     <div class="tech-stack-project">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">Airflow</span>
-                        <span class="tech-tag">Feast</span>
-                        <span class="tech-tag">MLflow</span>
+                        <span class="tech-tag">dbt</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Azure Data Platform</span>
+                        <span class="tech-tag">Power BI</span>
+<!--                        <span class="tech-tag">Feast</span>-->
+<!--                        <span class="tech-tag">MLflow</span>-->
                     </div>
 
                     <div class="project-metrics">
                         <div class="project-metric">
-                            <div class="project-metric-value">500+</div>
-                            <div class="project-metric-label">Features</div>
+                            <div class="project-metric-value">20%</div>
+                            <div class="project-metric-label">Improved data accuracy and query performance</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">50ms</div>
-                            <div class="project-metric-label">P95 Latency</div>
+                            <div class="project-metric-value">🏦</div>
+                            <div class="project-metric-label">Delivered a single source of truth for account analytics</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">15</div>
-                            <div class="project-metric-label">ML Models</div>
+                            <div class="project-metric-value">📊</div>
+                            <div class="project-metric-label">Enabled near-real-time portfolio insights via Power BI</div>
                         </div>
                     </div>
 
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/feature-store" class="project-link" target="_blank">View Code →</a>
-                        <a href="#" class="project-link" target="_blank">Architecture →</a>
-                    </div>
+<!--                    <div class="project-links">-->
+<!--                        <a href="https://github.com/yourusername/feature-store" class="project-link" target="_blank">View Code →</a>-->
+<!--                        <a href="#" class="project-link" target="_blank">Architecture →</a>-->
+<!--                    </div>-->
                 </div>
             </div>
 
             <!-- Project 4 -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3>Data Quality Monitoring Framework</h3>
+                    <h3>Real-Time Operations Monitoring Dashboard (Power BI)</h3>
                     <div class="project-meta">
-                        <span>📅 2022</span>
-                        <span>✅ Data Quality</span>
-                        <span>📊 Observability</span>
+                        <span>📅 2024</span>
+                        <span>✅ Analytics</span>
+                        <span>📊 BI · Operations</span>
                     </div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">
-                        Developed comprehensive data quality framework with automated profiling, anomaly detection, and alerting. Integrated with existing pipelines to catch data issues before they impact downstream consumers.
+                        Built a real-time performance monitoring solution for a warehouse and logistics operation where leadership lacked live visibility into floor-level performance. Existing reports were static and retrospective, making it difficult to act on issues in time.
+The solution combined optimized data preparation with a Power BI dashboard designed for both live “big-screen” monitoring and deep analytical investigation. It enabled operations teams to identify delays, inefficiencies, and root causes as they occurred.
                     </p>
                     
                     <div class="architecture-diagram">
-Data Pipelines → Quality Checks (Great Expectations)
-      ↓                ↓
-Schema Validation → Anomaly Detection
-      ↓                ↓
-Business Rules → Quality Metrics DB
-      ↓                ↓
-Alert System → Grafana Dashboards
-      ↓                ↓
-Data Stewards ← → Incident Management
+                         <pre class="mermaid">
+                                flowchart LR
+
+                                Producers[Event Producers]:::source
+                                Kafka[Kafka / Event Hubs]:::ingest
+                                Stream[Spark Structured Streaming]:::ingest
+                                Delta[Delta Lake Tables]:::lake
+                                API[Real-time APIs]:::serve
+                                Dash[Live Dashboards]:::serve
+
+                                Producers --> Kafka --> Stream --> Delta
+                                Delta --> API
+                                Delta --> Dash
+
+                                classDef source fill:#111827,stroke:#38bdf8,color:#e5e7eb
+                                classDef ingest fill:#020617,stroke:#22c55e,color:#e5e7eb
+                                classDef lake fill:#020617,stroke:#facc15,color:#e5e7eb
+                                classDef serve fill:#020617,stroke:#a78bfa,color:#e5e7eb
+                    </pre>
                     </div>
 
                     <div class="tech-stack-project">
-                        <span class="tech-tag">Great Expectations</span>
+                        <span class="tech-tag">Power BI</span>
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">PagerDuty</span>
-                        <span class="tech-tag">Slack</span>
+                        <span class="tech-tag">SQL</span>
+<!--                        <span class="tech-tag">Grafana</span>-->
+<!--                        <span class="tech-tag">PagerDuty</span>-->
+<!--                        <span class="tech-tag">Slack</span>-->
                     </div>
 
                     <div class="project-metrics">
                         <div class="project-metric">
-                            <div class="project-metric-value">1000+</div>
-                            <div class="project-metric-label">Daily Checks</div>
+                            <div class="project-metric-value">20%</div>
+                            <div class="project-metric-label">Reduced idle time</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">95%</div>
-                            <div class="project-metric-label">Issue Detection</div>
+                            <div class="project-metric-value">35%</div>
+                            <div class="project-metric-label">Improved decision-making speed</div>
                         </div>
                         <div class="project-metric">
-                            <div class="project-metric-value">80%</div>
-                            <div class="project-metric-label">Faster Resolution</div>
+                            <div class="project-metric-value">40%</div>
+                            <div class="project-metric-label">Automated reporting, cutting manual effort</div>
                         </div>
                     </div>
 
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/data-quality" class="project-link" target="_blank">View Code →</a>
-                        <a href="#" class="project-link" target="_blank">Blog Post →</a>
-                    </div>
+<!--                    <div class="project-links">-->
+<!--                        <a href="https://github.com/yourusername/data-quality" class="project-link" target="_blank">View Code →</a>-->
+<!--                        <a href="#" class="project-link" target="_blank">Blog Post →</a>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -1262,24 +1404,24 @@ Data Stewards ← → Incident Management
         <h2>Let's Build Something</h2>
         <p>Open to discussing data engineering opportunities, collaborations, or just talking about pipelines and architecture.</p>
         <div class="contact-links">
-            <a href="mailto:your.email@example.com" class="contact-link">
+            <a href="mailto:namol4708@gmail.com" class="contact-link">
                 <span>📧</span> Email
             </a>
-            <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+            <a href="https://github.com/anarwade149" target="_blank" class="contact-link">
                 <span>💻</span> GitHub
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">
+            <a href="https://linkedin.com/in/amolnarwade" target="_blank" class="contact-link">
                 <span>💼</span> LinkedIn
             </a>
-            <a href="https://medium.com/@yourusername" target="_blank" class="contact-link">
-                <span>✍️</span> Medium
-            </a>
+<!--            <a href="https://medium.com/@yourusername" target="_blank" class="contact-link">-->
+<!--                <span>✍️</span> Medium-->
+<!--            </a>-->
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Your Name • Data Engineer • Built with curiosity and code</p>
+        <p>© 2026 Amol Narwade • Data Engineer • Built with curiosity and code</p>
     </footer>
 
     <script>
