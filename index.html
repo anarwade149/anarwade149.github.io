@@ -1129,28 +1129,6 @@ Using Delta Lake and a Medallion architecture, the platform supports both batch 
                                     classDef lake fill:#020617,stroke:#facc15,color:#e5e7eb
                                     classDef serve fill:#020617,stroke:#a78bfa,color:#e5e7eb
                                 </pre>
-
-<!--                         <pre class="mermaid">-->
-<!--                        flowchart LR-->
-<!--                            Sources[Retail & Logistics Systems]-->
-
-<!--                            Sources &ndash;&gt;|Batch| ADF[Azure Data Factory]-->
-<!--                            Sources &ndash;&gt;|Streaming| EH[Event Hubs]-->
-
-<!--                            ADF &ndash;&gt; Bronze[Bronze]-->
-<!--                            EH &ndash;&gt; Bronze-->
-
-<!--                            Bronze &ndash;&gt; Silver[Silver]-->
-<!--                            Silver &ndash;&gt; Gold[Gold]-->
-
-<!--                            Gold &ndash;&gt; ADLS[ADLS Gen2]-->
-<!--                            Gold &ndash;&gt; Synapse[Synapse Serverless SQL]-->
-<!--                            Synapse &ndash;&gt; PowerBI[Power BI]-->
-<!--                        </pre>-->
-                    </div>
-<!--                    <p class="diagram-caption">-->
-<!--                        Medallion-based Azure Lakehouse supporting batch and streaming workloads with serverless analytics.-->
-<!--                    </p>-->
                     <div class="tech-stack-project">
                         <span class="tech-tag">Azure Data Factory</span>
                         <span class="tech-tag">Databricks</span>
@@ -1257,6 +1235,76 @@ The focus was to stabilize production workloads, improve processing efficiency, 
             <!-- Project 3 -->
             <div class="project-card fade-in">
                 <div class="project-header">
+                    <h3>Real-Time Operations Monitoring Dashboard (Power BI)</h3>
+                    <div class="project-meta">
+                        <span>📅 2024</span>
+                        <span>✅ Analytics</span>
+                        <span>📊 BI · Operations</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        Built a real-time performance monitoring solution for a warehouse and logistics operation where leadership lacked live visibility into floor-level performance. Existing reports were static and retrospective, making it difficult to act on issues in time.
+The solution combined optimized data preparation with a Power BI dashboard designed for both live “big-screen” monitoring and deep analytical investigation. It enabled operations teams to identify delays, inefficiencies, and root causes as they occurred.
+                    </p>
+
+                    <div class="architecture-diagram">
+                         <pre class="mermaid">
+                                flowchart LR
+
+                                Producers[Event Producers]:::source
+                                Kafka[Kafka / Event Hubs]:::ingest
+                                Stream[Spark Structured Streaming]:::ingest
+                                Delta[Delta Lake Tables]:::lake
+                                API[Real-time APIs]:::serve
+                                Dash[Live Dashboards]:::serve
+
+                                Producers --> Kafka --> Stream --> Delta
+                                Delta --> API
+                                Delta --> Dash
+
+                                classDef source fill:#111827,stroke:#38bdf8,color:#e5e7eb
+                                classDef ingest fill:#020617,stroke:#22c55e,color:#e5e7eb
+                                classDef lake fill:#020617,stroke:#facc15,color:#e5e7eb
+                                classDef serve fill:#020617,stroke:#a78bfa,color:#e5e7eb
+                    </pre>
+                    </div>
+
+                    <div class="tech-stack-project">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+<!--                        <span class="tech-tag">Grafana</span>-->
+<!--                        <span class="tech-tag">PagerDuty</span>-->
+<!--                        <span class="tech-tag">Slack</span>-->
+                    </div>
+
+                    <div class="project-metrics">
+                        <div class="project-metric">
+                            <div class="project-metric-value">20%</div>
+                            <div class="project-metric-label">Reduced idle time</div>
+                        </div>
+                        <div class="project-metric">
+                            <div class="project-metric-value">35%</div>
+                            <div class="project-metric-label">Improved decision-making speed</div>
+                        </div>
+                        <div class="project-metric">
+                            <div class="project-metric-value">40%</div>
+                            <div class="project-metric-label">Automated reporting, cutting manual effort</div>
+                        </div>
+                    </div>
+
+<!--                    <div class="project-links">-->
+<!--                        <a href="https://github.com/yourusername/data-quality" class="project-link" target="_blank">View Code →</a>-->
+<!--                        <a href="#" class="project-link" target="_blank">Blog Post →</a>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+
+            <!-- Project 4 -->
+            <div class="project-card fade-in">
+                <div class="project-header">
                     <h3>Corporate Account Statement Analytics (Banking)</h3>
                     <div class="project-meta">
                         <span>📅 2022</span>
@@ -1328,75 +1376,6 @@ By introducing governed transformations, reusable models, and strong data qualit
                 </div>
             </div>
 
-            <!-- Project 4 -->
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <h3>Real-Time Operations Monitoring Dashboard (Power BI)</h3>
-                    <div class="project-meta">
-                        <span>📅 2024</span>
-                        <span>✅ Analytics</span>
-                        <span>📊 BI · Operations</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <p class="project-description">
-                        Built a real-time performance monitoring solution for a warehouse and logistics operation where leadership lacked live visibility into floor-level performance. Existing reports were static and retrospective, making it difficult to act on issues in time.
-The solution combined optimized data preparation with a Power BI dashboard designed for both live “big-screen” monitoring and deep analytical investigation. It enabled operations teams to identify delays, inefficiencies, and root causes as they occurred.
-                    </p>
-                    
-                    <div class="architecture-diagram">
-                         <pre class="mermaid">
-                                flowchart LR
-
-                                Producers[Event Producers]:::source
-                                Kafka[Kafka / Event Hubs]:::ingest
-                                Stream[Spark Structured Streaming]:::ingest
-                                Delta[Delta Lake Tables]:::lake
-                                API[Real-time APIs]:::serve
-                                Dash[Live Dashboards]:::serve
-
-                                Producers --> Kafka --> Stream --> Delta
-                                Delta --> API
-                                Delta --> Dash
-
-                                classDef source fill:#111827,stroke:#38bdf8,color:#e5e7eb
-                                classDef ingest fill:#020617,stroke:#22c55e,color:#e5e7eb
-                                classDef lake fill:#020617,stroke:#facc15,color:#e5e7eb
-                                classDef serve fill:#020617,stroke:#a78bfa,color:#e5e7eb
-                    </pre>
-                    </div>
-
-                    <div class="tech-stack-project">
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SQL</span>
-<!--                        <span class="tech-tag">Grafana</span>-->
-<!--                        <span class="tech-tag">PagerDuty</span>-->
-<!--                        <span class="tech-tag">Slack</span>-->
-                    </div>
-
-                    <div class="project-metrics">
-                        <div class="project-metric">
-                            <div class="project-metric-value">20%</div>
-                            <div class="project-metric-label">Reduced idle time</div>
-                        </div>
-                        <div class="project-metric">
-                            <div class="project-metric-value">35%</div>
-                            <div class="project-metric-label">Improved decision-making speed</div>
-                        </div>
-                        <div class="project-metric">
-                            <div class="project-metric-value">40%</div>
-                            <div class="project-metric-label">Automated reporting, cutting manual effort</div>
-                        </div>
-                    </div>
-
-<!--                    <div class="project-links">-->
-<!--                        <a href="https://github.com/yourusername/data-quality" class="project-link" target="_blank">View Code →</a>-->
-<!--                        <a href="#" class="project-link" target="_blank">Blog Post →</a>-->
-<!--                    </div>-->
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Contact Section -->
